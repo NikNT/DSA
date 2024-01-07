@@ -8,6 +8,7 @@ function reverse(arr){
     let start = 0;
     let end = arr.length - 1;
 
+    // Swap the array elements
     while(start < end){
         [arr[start], arr[end]] = [arr[end], arr[start]]
 
