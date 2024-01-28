@@ -1,8 +1,8 @@
 function strStr(haystack, needle) {
-    if ((needle = "")) {
+    if (needle === "") {
         return 0;
     }
-    for (var i = 0; i < haystack.length - needle.length; i++) {
+    for (var i = 0; i <= haystack.length - needle.length; i++) {
         var j = void 0;
         for (j = 0; j < needle.length; j++) {
             if (haystack[i + j] !== needle[j]) {
@@ -15,6 +15,6 @@ function strStr(haystack, needle) {
     }
     return -1;
 }
-var hay = "a";
-var need = "a";
+var hay = "asasada";
+var need = "sad";
 console.log(strStr(hay, need));
