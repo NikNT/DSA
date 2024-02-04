@@ -1,11 +1,11 @@
 /**
  Do not return anything, modify nums1 in-place instead.
  */
-function merge(nums1: number[], m: number, nums2: number[], n: number): any {
+function merge(nums1: number[], m: number, nums2: number[], n: number): void {
   for (let i = 0; i < n; i++) {
     nums1[i + m] = nums2[i];
   }
-  return nums1.sort((a, b) => a - b);
+  nums1.sort((a, b) => a - b);
 }
 
 const nums1: number[] = [1, 2, 3, 0, 0, 0];
