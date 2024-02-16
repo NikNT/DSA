@@ -1,8 +1,12 @@
 function containsDuplicate(nums) {
-    nums = nums.sort(function (a, b) { return a - b; });
-    for (var i = 0; i < nums.length; i++) {
-        if (nums[i] === nums[i + 1]) {
+    var myMap = new Map();
+    for (var _i = 0, nums_1 = nums; _i < nums_1.length; _i++) {
+        var num = nums_1[_i];
+        if (myMap.has(num)) {
             return true;
+        }
+        else {
+            myMap.set(num, true);
         }
     }
     return false;
