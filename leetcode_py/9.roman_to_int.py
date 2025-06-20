@@ -12,13 +12,13 @@ def roman(s):
     total = 0
     n = len(s)
 
-    for ch in range(n):
-        curr = roman_numerals[s[ch]]
-
-        if ch + 1 < n and roman_numerals[s[ch + 1]] > curr:
-            total -= curr
+    for i in range(n):
+        current_character = roman_numerals[s[i]]
+        
+        if i + 1 < n and roman_numerals[s[i + 1]] > current_character:
+            total -= current_character
         else:
-            total += curr
+            total += current_character
 
     return total 
 
